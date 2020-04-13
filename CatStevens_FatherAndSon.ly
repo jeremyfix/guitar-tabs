@@ -4,7 +4,7 @@
 
 \header {
 	title = "Father and son"
-		composer = "Cat Stevens"
+	composer = "Cat Stevens"
 }
 
 verseI = \lyricmode {
@@ -16,26 +16,37 @@ verseII = \lyricmode {
   Darling darling
 }
 
-theChords = \relative c' \chordmode {
-  % insert chords for chordnames and fretboards here
-  g d c^\upbow e:m^\downbow
+theFretChords = \chordmode {
+  g,1 d c^\upbow e:m^\downbow
 }
-
+theChords =  {
+   \tempo 4=70
+   %\clef "tab"
+   %\key c \major
+   %\time 4/4
+   % G
+   <g,\6 b,\5 d\4 >4^\downbow
+   <g,\6 b,\5 d\4 >4^\downbow
+   <d\4 g\3 b\2 g'\1 >4^\downbow
+   <d\4 g\3 b\2 g'\1 >8^\downbow
+   <d\4 g\3 b\2 g'\1 >8^\upbow
+   % G
+   <a,\5 d\4 >4^\downbow
+   <a,\5 d\4 >4^\downbow
+   <d\4 a\3 d'\2 fis'\1 >4^\downbow
+   <d\4 a\3 d'\2 fis'\1 >8^\downbow
+   <d\4 a\3 d'\2 fis'\1 >8^\upbow
+}
 
 
 \score {
   <<
     \new ChordNames { 
-		\theChords 
+		\theFretChords 
 	} 
     \new FretBoards { 
-		\chordmode {
 		\set predefinedDiagramTable = #default-fret-table
-		\theChords
-		}
-	}
-	\new Staff {
-		\theChords
+		\theFretChords
 	}
 	\new TabStaff {
 		\theChords
