@@ -17,25 +17,26 @@ verseII = \lyricmode {
 }
 
 theFretChords = \chordmode {
-  g,1 d c^\upbow e:m^\downbow
+  g,1 d c^\upbow e:m^\downbow 
 }
 theChords =  {
+   \set theChords.midiInstrument = #"acoustic guitar (nylon)"
    \tempo 4=70
    %\clef "tab"
    %\key c \major
    %\time 4/4
    % G
-   <g,\6 b,\5 d\4 >4^\downbow
-   <g,\6 b,\5 d\4 >4^\downbow
-   <d\4 g\3 b\2 g'\1 >4^\downbow
+   <g,\6 b,\5 d\4 >8^\downbow
+   <g,\6 b,\5 d\4 >8^\downbow
    <d\4 g\3 b\2 g'\1 >8^\downbow
-   <d\4 g\3 b\2 g'\1 >8^\upbow
+   <d\4 g\3 b\2 g'\1 >16^\downbow
+   <d\4 g\3 b\2 g'\1 >16^\upbow
    % G
-   <a,\5 d\4 >4^\downbow
-   <a,\5 d\4 >4^\downbow
-   <d\4 a\3 d'\2 fis'\1 >4^\downbow
+   <a,\5 d\4 >8^\downbow
+   <a,\5 d\4 >8^\downbow
    <d\4 a\3 d'\2 fis'\1 >8^\downbow
-   <d\4 a\3 d'\2 fis'\1 >8^\upbow
+   <d\4 a\3 d'\2 fis'\1 >16^\downbow
+   <d\4 a\3 d'\2 fis'\1 >16^\upbow
 }
 
 
@@ -53,5 +54,6 @@ theChords =  {
 	}
   >>
   \layout { }
-  \midi { }
+  \midi { 
+  }
 }
